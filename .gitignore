@@ -1,0 +1,10 @@
+myenv
+.env
+.env.example
+__pycache__
+*.pyc
+*.log
+debug_*.txt
+enum_output*.txt
+restock_error.json
+schema_info.json
