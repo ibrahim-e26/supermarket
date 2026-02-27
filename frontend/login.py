@@ -118,11 +118,6 @@ def show_login(cookie_manager):
                         cookie_manager.set("user_id", str(token_data["user_id"]), key="set_user_id")
                         cookie_manager.set("page", target_page, key="set_page")
                         
-                        if token_data.get("db_connected"):
-                            st.success("✅ database is connected to backend")
-                            import time
-                            time.sleep(1.5)  # Let user see the message
-                        
                         st.rerun()
                     else:
                         st.error("Invalid username or password")

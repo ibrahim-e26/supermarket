@@ -15,18 +15,10 @@ router = APIRouter(prefix="/auth", tags=["Authentication"])
 @router.post("/login", response_model=Token)
 def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
     """Login with username + password, returns JWT token."""
-    from backend.database import check_db_connection
     user = AuthService.authenticate(db, form_data.username, form_data.password)
     token = AuthService.create_token(user)
     role = user.role.value if hasattr(user.role, "value") else user.role
-    db_status = check_db_connection()
-    return Token(
-        access_token=token, 
-        role=role, 
-        username=user.username, 
-        user_id=user.id,
-        db_connected=db_status
-    )
+    return Token(access_token=token, role=role, username=user.username, user_id=user.id)
 
 
 @router.post("/register", response_model=UserResponse)
