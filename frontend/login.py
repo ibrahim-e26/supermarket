@@ -76,7 +76,7 @@ def show_login(cookie_manager):
     """, unsafe_allow_html=True)
 
     st.markdown('<div class="login-card">', unsafe_allow_html=True)
-    st.markdown('<p class="login-title">🛒 E26 Supermarket</p>', unsafe_allow_html=True)
+    st.markdown('<p class="login-title">🛒 Salethur Supermarket</p>', unsafe_allow_html=True)
     st.markdown('<p class="login-subtitle">Point of Sale & CRM System</p>', unsafe_allow_html=True)
 
     with st.form("login_form"):
