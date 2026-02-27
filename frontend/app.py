@@ -104,7 +104,7 @@ with st.sidebar:
     st.markdown(f"""
     <div style="text-align:center; padding: 16px 0 8px;">
         <div style="font-size:2rem;">🛒</div>
-        <div style="font-size:1.1rem; font-weight:700; color:#fff;">E26 Supermarket</div>
+        <div style="font-size:1.1rem; font-weight:700; color:#fff;">Salethur Supermarket</div>
         <div style="font-size:0.8rem; color:rgba(255,255,255,0.4);">POS + CRM System</div>
     </div>
     """, unsafe_allow_html=True)
