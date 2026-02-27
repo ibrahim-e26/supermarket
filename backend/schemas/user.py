@@ -33,3 +33,4 @@ class Token(BaseModel):
     role: str
     username: str
     user_id: int
+    db_connected: bool
