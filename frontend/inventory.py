@@ -6,13 +6,7 @@ import requests
 import os
 import pandas as pd
 
-def get_api_base():
-    try:
-        return st.secrets["BACKEND_URL"]
-    except Exception:
-        return os.getenv("BACKEND_URL", os.getenv("API_BASE", "http://localhost:8000"))
-
-API_BASE = get_api_base()
+from config import API_BASE
 
 
 def _headers():

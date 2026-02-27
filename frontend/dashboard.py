@@ -9,13 +9,7 @@ import plotly.graph_objects as go
 import plotly.express as px
 from datetime import date
 
-def get_api_base():
-    try:
-        return st.secrets["BACKEND_URL"]
-    except Exception:
-        return os.getenv("BACKEND_URL", os.getenv("API_BASE", "http://localhost:8000"))
-
-API_BASE = get_api_base()
+from config import API_BASE
 
 
 def _headers():
